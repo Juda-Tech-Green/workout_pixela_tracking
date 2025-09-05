@@ -47,11 +47,12 @@ print(graph_response.text)"""
 # Post a pixel
 
 pixel_post_config=  {
-    "date":'20250819',
-    "quantity":"7.5"
+    "date":'20250904',
+    "quantity":"8.0"
 }
 
 pixel_post_response = requests.post(url=f'{graph_endpoint}/gym1', headers=headers,json=pixel_post_config)
 
-print(pixel_post_response.text)
+print('------------ STATUS ------------')
+print(pixel_post_response.status_code)
 print('https://pixe.la/v1/users/juda-tech/graphs/gym1.html')
